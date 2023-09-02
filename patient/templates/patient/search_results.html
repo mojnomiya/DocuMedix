@@ -29,7 +29,7 @@
 								<td>{{ patient.date|date:"Y-m-d" }}</td>
 								<td>{{ patient.date|time:"H:i:s" }}</td>
 								<td>
-									<a href="#"><button class="btn btn-primary btn-sm">View Details</button></a>
+									<a href="{% url 'patient-detail' patient.id %}"><button class="btn btn-primary btn-sm">View Details</button></a>
 								</td>
 							</tr>
 							{% endfor %}
