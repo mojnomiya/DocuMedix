@@ -133,6 +133,7 @@ def edit_patient_detail(request, patient_id):
 
     return render(request, 'patient/edit-patient.html', {'form': form})
 
+@login_required
 def delete_patient_detail(request, patient_id):
     patient = get_object_or_404(PatientDetails, pk=patient_id)
     patient.delete()
@@ -152,6 +153,7 @@ def search_patients(request):
     return render(request, 'patient/search_results.html', {'patients': patients})
 
 
+@login_required
 def patient_detail(request, patient_id):
     patient = PatientDetails.objects.get(pk=patient_id)
     return render(request, 'patient/about-patient.html', {'patient': patient})

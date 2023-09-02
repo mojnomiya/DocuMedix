@@ -49,7 +49,7 @@
 							<tbody>
 								{% for patient in patients %}
 								<tr>
-									<td>{{patient.first_name}}</td>
+									<td>{{patient.get_full_name}}</td>
 									<td>{{patient.treating_doctor}}</td>
 									<td>{{patient.department}}</td>
 									<td>{{patient.age}}</td>
